@@ -1,0 +1,46 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<script>
+let foodget=prompt("Enter the food")
+
+ let order=true;
+function food(ms){
+    return new Promise((resolve,reject)=>{
+    if(order){
+        setTimeout(resolve,ms)
+    }
+    else{
+        reject(` Your order is not placed`)
+    }
+})
+}
+async function foodie(){
+    try{
+        await food(1000)
+       console.log (`Robin Orders a ${foodget}`);
+        
+       await food(2000)
+      console.log(`The app note down the order for a  ${foodget}`);
+
+        await food(3000)
+       console.log(`Swiggy Hub is preparing a ${foodget}`);
+	   
+	   await food(4000)
+       console.log(`Robin gets a notification that his ${foodget} is on the way!`);
+	   
+	    await food(5000)
+       console.log(`${foodget} has delivered successfully`);
+    }
+    catch(error){
+        console.log(error)
+    }
+}
+foodie()
+
+
+</script>
+</body>
+</html>

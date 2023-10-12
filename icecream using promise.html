@@ -1,0 +1,69 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<script>
+let stocks={
+    fruits:["mango","apple","lemon","orange"],
+    liquid:["milk","water"],
+    holder:["cup","bottle"],
+	toppings:["chocolate","nuts"]
+}
+let shop =new Promise(function(resolve,reject){
+    let open=true
+    if(open){
+        resolve();
+    }
+    else{
+        reject();
+    }
+   
+})
+shop.then(()=>{
+    setTimeout(function(){
+     console.log(stocks.fruits[3]+" was selected");
+    },1000)
+    })
+	.then(()=>{
+    setTimeout(function(){
+        console.log("Production has started");
+    },2000)
+})
+.then(()=>{
+    setTimeout(function(){
+        console.log("fruits has been chopped");
+    },3000)
+})
+.then(()=>{
+    setTimeout(function(){
+       console.log(stocks.liquid[0]+" added");
+    },4000)
+})
+.then(()=>{
+    setTimeout(function(){
+       console.log("Machine started");
+    },5000)
+})
+.then(()=>{
+    setTimeout(function(){
+       console.log("Your icecream is placed in the "+stocks.holder[0]);
+    },6000)
+})
+.then(()=>{
+    setTimeout(function(){
+       console.log(stocks.toppings[0]+" as toppings");
+    },7000)
+})
+.then(()=>{
+    setTimeout(function(){
+       console.log("Served icecream successfully");
+    },8000)
+})
+
+.catch(()=>{
+  console.log("shop is closed");
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Promise</title>
+</head>
+<body>
+<script>
+let num1=new Promise(function(resolve,reject){
+let n1=parseInt(prompt("Enter the first Number:"));
+resolve(n1);
+});
+let num2=new Promise(function(resolve,reject){
+let n2=parseInt(prompt("Enter the  second  Number:"));
+resolve(n2);
+});
+let num3=new Promise(function(resolve,reject){
+let n3=parseInt(prompt("Enter the   third Number:"));
+resolve(n3);
+});
+Promise.all([num1,num2,num3]).then((msg)=>{
+let a=0;
+for(b of msg){
+a=a+b;
+}
+console.log(`Sum of the  three Numbers is :${a}`);
+let c=a/3;
+console.log(`The average of the numbers is: ${c}`);
+});
+</script>
+</body>
+</html>

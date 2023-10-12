@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Toss Using Promise</title>
+</head>
+<body>
+<script>
+let coin=new Promise(function(resolve,reject){
+let toss=prompt("Enter the Toss:");
+let head;
+let tail;
+    if(toss=="head"){
+        head=true;
+        }
+    else if(toss=="tail"){
+        tail=false;
+       }
+    if(head==true){
+        resolve(toss);
+    }
+    else {
+         reject(toss);
+    }
+});
+coin.then((toss)=>{
+   console.log("You Win the Toss");
+}).catch((toss)=>{
+   console.log("You Loss the Toss");
+});
+</script>
+</body>
+</html>

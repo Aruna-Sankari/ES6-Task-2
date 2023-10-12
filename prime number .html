@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Prime Number using Promise </title>
+</head>
+<body>
+<script>
+let n=prompt("Enter the Number:");
+let a=new Promise(function(resolve,reject){
+for(i=2;i<n;i++){
+if(n%i==0){
+resolve("Not a Prime Number");
+}
+else{
+reject("Prime Number");
+}
+}
+});
+a.then((msg)=>{
+console.log(msg);
+}).catch((msg)=>{
+console.log(msg);
+});
+</script>
+</body>
+</html>

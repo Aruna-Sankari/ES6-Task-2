@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>order a pizza using promise</title>
+</head>
+<body>
+<script>
+let food=new Promise(function(resolve,reject){
+let foodget=prompt("ENTER THE FOOD NAME");
+let order=true
+resolve(foodget)
+reject()
+});
+
+food.then((msg)=>{
+setTimeout(function(){
+console.log(`Robin orders a ${msg}`);
+	setTimeout(function(){
+			console.log(`The app notes down the order for a ${msg}`);
+		        	setTimeout(function(){
+			                      console.log(`SwiggyHub is preparing a  ${msg}` );
+								      setTimeout(function(){
+									         console.log(`Robin gets a notification that his ${msg}  is on the way!`);
+									      setTimeout(function(){
+									            console.log(`${msg} has delivered successfully`);
+											                                          	},5000);
+																			 },4000);
+															},3000);
+										},2000);
+							},1000);
+
+})
+.catch(()=>{
+console.log("not order");
+});
+</script>
+</body>
+</html>
